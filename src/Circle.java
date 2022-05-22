@@ -9,6 +9,12 @@ public class Circle extends Shape{
 
     }*/
 
+    public void doSomething() {
+        for(int i = 0; i < 10; i++) {
+            System.out.println("i: " + i);
+        }
+    }
+
     @Override
     public void draw(Graphics g1) {
         Graphics2D g= (Graphics2D) g1;
