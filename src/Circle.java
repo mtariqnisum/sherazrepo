@@ -15,6 +15,9 @@ public class Circle extends Shape{
         }
     }
 
+    public void sherazMethod() {
+        System.out.println("Hello");
+    }
     @Override
     public void draw(Graphics g1) {
         Graphics2D g= (Graphics2D) g1;
