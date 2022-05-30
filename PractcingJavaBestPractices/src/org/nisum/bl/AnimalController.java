@@ -1,12 +1,15 @@
-package controller;
+package org.nisum.bl;
 
-import model.*;
+import org.nisum.customexception.AnimalException;
+import org.nisum.dto.Cat;
+import org.nisum.dto.PetAnimalImpl;
+import org.nisum.utils.FileHandling;
 
 import java.util.ArrayList;
 
 public class AnimalController {
     private FileHandling file;
-    private ArrayList<PetAnimal> catArrayList;
+    private ArrayList<PetAnimalImpl> catArrayList;
 
     public AnimalController(String path) {
         file = new FileHandling(path);
@@ -15,10 +18,11 @@ public class AnimalController {
             catArrayList=file.readData();
         } catch (AnimalException e) {
             System.out.println(e.getMessage());
+            // dont use sout now, use log4j2
         }
     }
 
-    public void addPetAnimal(PetAnimal petAnimal) {
+    public void addPetAnimal(PetAnimalImpl petAnimal) {
         try {
             catArrayList.add(petAnimal);
             file.writeData(catArrayList);

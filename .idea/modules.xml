@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PractcingJavaBestPractices/PractcingJavaBestPractices.iml" filepath="$PROJECT_DIR$/PractcingJavaBestPractices/PractcingJavaBestPractices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PracticingSomeDataStructureConcepts/PracticingSomeDataStructureConcepts.iml" filepath="$PROJECT_DIR$/PracticingSomeDataStructureConcepts/PracticingSomeDataStructureConcepts.iml" />
       <module fileurl="file://$PROJECT_DIR$/safdsa.iml" filepath="$PROJECT_DIR$/safdsa.iml" />
     </modules>
   </component>

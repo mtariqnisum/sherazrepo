@@ -1,12 +1,14 @@
-package model;
+package org.nisum.dto;
 
-public abstract class PetAnimal implements Animal{
+import org.nisum.interfaces.AnimalInterface;
+
+public abstract class PetAnimalImpl implements AnimalInterface {
 
     private int health;
     private int petID;
     private String name;
 
-    public PetAnimal(String name,int health,int petID) {
+    public PetAnimalImpl(String name, int health, int petID) {
         this.health = health;
         this.petID=petID;
         this.name=name;
