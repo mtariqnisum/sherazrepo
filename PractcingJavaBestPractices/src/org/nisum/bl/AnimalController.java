@@ -1,5 +1,6 @@
 package org.nisum.bl;
 
+import org.nisum.AnimalAppDriver;
 import org.nisum.customexception.AnimalException;
 import org.nisum.dto.Cat;
 import org.nisum.dto.PetAnimalImpl;
@@ -17,7 +18,7 @@ public class AnimalController {
         try {
             catArrayList=file.readData();
         } catch (AnimalException e) {
-            System.out.println(e.getMessage());
+            AnimalAppDriver.log.info(e.getMessage());
             // dont use sout now, use log4j2
         }
     }
@@ -27,7 +28,7 @@ public class AnimalController {
             catArrayList.add(petAnimal);
             file.writeData(catArrayList);
         } catch (AnimalException e) {
-            System.out.println(e.getMessage());
+            AnimalAppDriver.log.info(e.getMessage());
         }
 
     }
@@ -36,7 +37,7 @@ public class AnimalController {
     {
         for(int i=0;i<catArrayList.size();i++)
         {
-            System.out.println(((Cat)catArrayList.get(i)).toString());
+            AnimalAppDriver.log.info(((Cat)catArrayList.get(i)).toString());
         }
     }
 
